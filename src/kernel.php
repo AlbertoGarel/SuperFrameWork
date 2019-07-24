@@ -4,6 +4,7 @@ namespace App;
 class Kernel
 {
     public function __construct(){
-        echo "hola mundo";
+       $viewManager = new ViewManager();
+       $viewManager->renderTemplate("index.twig.html");
     }
 }
