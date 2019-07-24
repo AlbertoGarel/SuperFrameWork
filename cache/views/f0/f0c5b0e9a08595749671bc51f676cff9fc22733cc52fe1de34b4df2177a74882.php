@@ -24,17 +24,31 @@ class __TwigTemplate_f5204ab09645d1665f3fdf20f9c1a8d302fffe9bf2490a060fc398411a9
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "template.twig.html";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        echo "<h1>Hola Mundo</h1>";
+        $this->parent = $this->loadTemplate("template.twig.html", "index.twig.html", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
+
+    // line 3
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 4
+        echo "    <h1>Hola Mundo</h1>
+";
     }
 
     public function getTemplateName()
@@ -42,9 +56,14 @@ class __TwigTemplate_f5204ab09645d1665f3fdf20f9c1a8d302fffe9bf2490a060fc398411a9
         return "index.twig.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
