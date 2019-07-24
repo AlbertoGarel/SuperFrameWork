@@ -1,0 +1,10 @@
+{
+    "name": "xavi/superframework",
+    "authors": [
+        {
+            "name": "Xavi",
+            "email": "xavi@geekshubs.com"
+        }
+    ],
+    "require": {}
+}
