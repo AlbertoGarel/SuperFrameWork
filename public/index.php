@@ -5,3 +5,4 @@ use App\kernel;
 
 
 $kernel = new Kernel();
+$kernel->init();
