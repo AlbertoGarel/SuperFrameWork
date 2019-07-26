@@ -3,11 +3,12 @@
 namespace App\controllers;
 use App\ViewManager;
 
-class HomeController
+
+class HomeController extends Controller
 {
+      
     public function index()
     {
-        $viewManager = new ViewManager();
-        $viewManager->renderTemplate("index.twig.html");
+           $this->viewManager->renderTemplate("index.twig.html");
     }
 }
