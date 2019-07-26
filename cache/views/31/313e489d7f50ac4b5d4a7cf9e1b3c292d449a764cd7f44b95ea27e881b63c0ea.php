@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* who.twig.html */
-class __TwigTemplate_0f723687db85977cff1e5ee73eb56c9206895e841d0fa9783001fb8f2f0f00aa extends \Twig\Template
+/* where.twig.html */
+class __TwigTemplate_07e2289a1e3eec8797576c8bf747b98916301b113c180bb809d49dce89fccd1b extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_0f723687db85977cff1e5ee73eb56c9206895e841d0fa9783001fb8f2f0
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("template.twig.html", "who.twig.html", 1);
+        $this->parent = $this->loadTemplate("template.twig.html", "where.twig.html", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -47,13 +47,13 @@ class __TwigTemplate_0f723687db85977cff1e5ee73eb56c9206895e841d0fa9783001fb8f2f0
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Quienes somos</h1>
+        echo "    <h1>Donde Estamos</h1>
 ";
     }
 
     public function getTemplateName()
     {
-        return "who.twig.html";
+        return "where.twig.html";
     }
 
     public function isTraitable()
@@ -68,6 +68,6 @@ class __TwigTemplate_0f723687db85977cff1e5ee73eb56c9206895e841d0fa9783001fb8f2f0
 
     public function getSourceContext()
     {
-        return new Source("", "who.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/who.twig.html");
+        return new Source("", "where.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/where.twig.html");
     }
 }
