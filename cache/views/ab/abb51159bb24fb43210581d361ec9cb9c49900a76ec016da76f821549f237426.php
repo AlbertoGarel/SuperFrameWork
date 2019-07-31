@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* usersView.twig.html */
-class __TwigTemplate_17436f7dc4161ba14545d0c6c57b7f4f79e6254071dc5110b28ae9bffe6bf601 extends \Twig\Template
+/* register.twig.html */
+class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0deee4 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_17436f7dc4161ba14545d0c6c57b7f4f79e6254071dc5110b28ae9bffe6
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("template.twig.html", "usersView.twig.html", 1);
+        $this->parent = $this->loadTemplate("template.twig.html", "register.twig.html", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -47,13 +47,13 @@ class __TwigTemplate_17436f7dc4161ba14545d0c6c57b7f4f79e6254071dc5110b28ae9bffe6
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Hola Users</h1>
+        echo "    <h1>Hola Registro</h1>
 ";
     }
 
     public function getTemplateName()
     {
-        return "usersView.twig.html";
+        return "register.twig.html";
     }
 
     public function isTraitable()
@@ -68,6 +68,6 @@ class __TwigTemplate_17436f7dc4161ba14545d0c6c57b7f4f79e6254071dc5110b28ae9bffe6
 
     public function getSourceContext()
     {
-        return new Source("", "usersView.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/usersView.twig.html");
+        return new Source("", "register.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/register.twig.html");
     }
 }
