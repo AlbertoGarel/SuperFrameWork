@@ -48,7 +48,7 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
     <header>
         <ul class=\"nav justify-content-end\">
             <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\"#\">Login</a>
+                <a class=\"nav-link\" href=\"/login\">Login</a>
             </li>
             <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"/register\">Registro</a>
