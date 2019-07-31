@@ -4,6 +4,7 @@ namespace App\controllers;
 
 use App\ViewManager;
 use App\DoctrineManager;
+use Kint;
 
 abstract class Controller
 {
@@ -19,5 +20,10 @@ abstract class Controller
 
     public abstract function index();
 
+    public function redirectTo(string $page)
+    {
+        $host = $_SERVER['HTTP_HOST'];
+        header("Location: http://$host/$page");
+    }    
 
 }

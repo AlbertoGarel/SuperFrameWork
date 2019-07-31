@@ -17,15 +17,17 @@ class LoginController extends Controller
     public function login(){
         $email = $_POST['email'];
         $password = $_POST['password'];
-        \Kint::dump($email, $password);
         $repository = $this->doctrineManager->em->getRepository(User::class);
         $user = $repository->findByEmail($email);
-        \Kint::dump($user);
         if(!$user) {
-            $this->error= "No existe usuario";
+            $this->error= "No existe usuario o Password Incorrecto";
             $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
         }
-            echo $user->email;
+        if($user[0]->password !== sha1($password)){
+            $this->error= "No existe usuario o Password Incorrecto";
+            $this->viewManager->renderTemplate('login.twig.html',['error'=>$this->error]);
+        }
+        $this->redirectTo('');
 
     }
 }
