@@ -64,7 +64,7 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
         if (($context["user"] ?? null)) {
             // line 22
             echo "            <div class=\"dropdown\">
-                <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-togle=\"dropdown\" aria-expanded=\"false\">
+                <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-expanded=\"false\">
                     ";
             // line 24
             echo twig_escape_filter($this->env, ($context["user"] ?? null), "html", null, true);
