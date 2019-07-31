@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* register.twig.html */
-class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0deee4 extends \Twig\Template
+/* dashboard.twig.html */
+class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c356704 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("template.twig.html", "register.twig.html", 1);
+        $this->parent = $this->loadTemplate("template.twig.html", "dashboard.twig.html", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -47,28 +47,13 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
     {
         $macros = $this->macros;
         // line 4
-        echo "    
-    <div class=\"container\">
-        <div class=\"wrapper\">
-
-            <form role=\"form\" method=\"POST\" name=\"register_form\" class=\"form-signing\">
-                <h3 class=\"form-signin-heading\">Registro</h3>
-                <hr class=\"colorgraph\"><hr/>
-                <input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Nombre\" required=\"\" autofocus=\"\" />
-                <input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"Correo electrónico\" required=\"\" autofocus=\"\"/>
-                <input type=\"password\" class=\"form-control\" name=\"password\" placehoder=\"Password\" required=\"\" />
-                <button class=\"btn btn-lg btn-primary btn-block\" name=\"submit\" value=\"Register\" type=\"Submit\">Registro</button>
-            </form>
-       </div>
-    </div>
-
-
+        echo "    <h1>Hola Panel de Control</h1>
 ";
     }
 
     public function getTemplateName()
     {
-        return "register.twig.html";
+        return "dashboard.twig.html";
     }
 
     public function isTraitable()
@@ -83,6 +68,6 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
 
     public function getSourceContext()
     {
-        return new Source("", "register.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/register.twig.html");
+        return new Source("", "dashboard.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/dashboard.twig.html");
     }
 }
