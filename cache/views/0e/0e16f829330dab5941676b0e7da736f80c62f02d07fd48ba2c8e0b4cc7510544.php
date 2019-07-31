@@ -47,19 +47,45 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
 <body>
     <header>
         <ul class=\"nav justify-content-end\">
-            <li class=\"nav-item\">
+            ";
+        // line 13
+        if (twig_test_empty(($context["user"] ?? null))) {
+            // line 14
+            echo "            <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"/login\">Login</a>
             </li>
             <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"/register\">Registro</a>
             </li>
-        </ul>
+            ";
+        }
+        // line 21
+        echo "            ";
+        if (($context["user"] ?? null)) {
+            // line 22
+            echo "            <div class=\"dropdown\">
+                <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-togle=\"dropdown\" aria-expanded=\"false\">
+                    ";
+            // line 24
+            echo twig_escape_filter($this->env, ($context["user"] ?? null), "html", null, true);
+            echo "
+                </button>
+                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\">
+                    <a class=\"dropdown-item\" type=\"button\" href=\"/paneldecontrol\">Panel de Control</a>
+                    <a class=\"dropdown-item\" type=\"button\" href=\"/perfil\">Perfil</a>
+                    <a class=\"dropdown-item\" type=\"button\" href=\"/salir\">Salir</a>
+                </div>
+            </div>
+            ";
+        }
+        // line 33
+        echo "        </ul>
     </header>
   
     ";
-        // line 22
+        // line 36
         $this->displayBlock('body', $context, $blocks);
-        // line 24
+        // line 38
         echo "
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
@@ -68,11 +94,11 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
 </html>";
     }
 
-    // line 22
+    // line 36
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 23
+        // line 37
         echo "    ";
     }
 
@@ -81,9 +107,14 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
         return "template.twig.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  76 => 23,  72 => 22,  63 => 24,  61 => 22,  38 => 1,);
+        return array (  102 => 37,  98 => 36,  89 => 38,  87 => 36,  82 => 33,  70 => 24,  66 => 22,  63 => 21,  54 => 14,  52 => 13,  38 => 1,);
     }
 
     public function getSourceContext()
