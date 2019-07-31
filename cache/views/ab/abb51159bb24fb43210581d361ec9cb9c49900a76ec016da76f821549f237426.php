@@ -47,7 +47,22 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Hola Registro</h1>
+        echo "    
+    <div class=\"container\">
+        <div class=\"wrapper\">
+
+            <form role=\"form\" method=\"POST\" name=\"register_form\" class=\"form-signing\">
+                <h3 class=\"form-signin-heading\">Registro</h3>
+                <hr class=\"colorgraph\"><hr/>
+                <input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Nombre\" required=\"\" autofocus=\"\" />
+                <input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"Correo electrónico\" required=\"\" autofocus=\"\"/>
+                <input type=\"password\" class=\"form-control\" name=\"password\" placehoder=\"Password\" required=\"\" />
+                <button class=\"btn btn-lg btn-primary btn-block\" name=\"submit\" value=\"Register\" type=\"Submit\">Registro</button>
+            </form>
+       </div>
+    </div>
+
+
 ";
     }
 
