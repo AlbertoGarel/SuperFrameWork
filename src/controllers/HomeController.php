@@ -21,8 +21,7 @@ class HomeController extends Controller
      public function index()
     {
          $posts = $this->postService->getPosts();
-          \Kint::dump($posts);
-            
+          
            $this->viewManager->renderTemplate("index.twig.html",["posts"=>$posts]);
     }
 }

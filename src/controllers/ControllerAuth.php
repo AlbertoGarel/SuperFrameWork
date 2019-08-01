@@ -3,7 +3,6 @@
 namespace App\controllers;
 
 use App\ViewManager;
-use App\DoctrineManager;
 use App\LogManager;
 use App\SessionManager;
 use Kint;
@@ -12,15 +11,13 @@ abstract class ControllerAuth
 {
 
     protected $viewManager;
-    protected $doctrineManager;
     protected $logManager;
     protected $sessionManager;
     protected $user;
 
-    public function __construct(ViewManager $viewManager, DoctrineManager $doctrineManager, LogManager $logManager, SessionManager $sessionManager)
+    public function __construct(ViewManager $viewManager, LogManager $logManager, SessionManager $sessionManager)
     {
         $this->viewManager = $viewManager;
-        $this->doctrineManager= $doctrineManager;
         $this->logManager= $logManager;
         $this->logManager->info("Controlador ->".get_class($this)." cargado");
         $this->sessionManager = $sessionManager;

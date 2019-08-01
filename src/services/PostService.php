@@ -11,4 +11,16 @@ class PostService extends Service
         return $repository->findAll();
     }
 
+    public function createPost(Post $post):Post
+    {
+        try{
+            $this->doctrineManager->em->persist($post);
+            $this->doctrineManager->em->flush();
+            return $post;
+        }catch (Exception $e){
+            $this->logManager->error($e.toString());
+        }
+        return null;        
+    }
+
 }
