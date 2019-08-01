@@ -84,7 +84,14 @@ class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c3
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 23), "html", null, true);
             echo "\">Editar</a> </td>
-                    <td>Borrar</td>    
+                    <td><a id=\"#";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo "\" class=\"btn btn-danger\" href=\"#\" onclick=\"deleteMsg( '";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 24), "html", null, true);
+            echo "','";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo "')\">Borrar</a></td>    
                 </tr>
             ";
         }
@@ -94,6 +101,28 @@ class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c3
         // line 27
         echo "        </tbody>
     </table>
+
+    <!--Modal-->
+    <div class=\"modal fade\" id=\"deleteModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\" role=\"document\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">Borrar</h5>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                        <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                </div>
+                <div class=\"modal-body\">
+
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Cerrar</button>
+                    <button type=\"button\" class=\"btn btn-danger\">Borrar</button>
+                </div>
+            </div>
+        </div>       
+    </div>
+
 ";
     }
 
@@ -109,7 +138,7 @@ class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c3
 
     public function getDebugInfo()
     {
-        return array (  95 => 27,  85 => 23,  81 => 22,  77 => 21,  73 => 20,  70 => 19,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  102 => 27,  89 => 24,  85 => 23,  81 => 22,  77 => 21,  73 => 20,  70 => 19,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
