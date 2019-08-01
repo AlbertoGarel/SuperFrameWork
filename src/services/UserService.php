@@ -18,4 +18,16 @@ class UserService extends Service
         return null;
     }
 
+    public function createUser(User $user):User
+    {
+        try{
+            $this->doctrineManager->em->persist($user);
+            $this->doctrineManager->em->flush();
+            return $user;
+        }catch(Exception $e){
+            $this->logManager->error($e.toString());
+        }
+        return null;
+    }
+
 }
