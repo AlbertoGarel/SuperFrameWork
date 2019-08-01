@@ -5,16 +5,17 @@ use App\ViewManager;
 use App\services\PostService;
 use Kint;
 
+
 class HomeController extends Controller
 {
  
+    /**
+     * @Inject
+     * @var PostService
+     */
     private $postService;
 
-    public function __invoke(PostService $postService)
-    {
-        $this->postService = $postService;
-    }
-    
+   
     
        
      public function index()
