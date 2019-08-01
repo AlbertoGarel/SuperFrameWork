@@ -48,17 +48,51 @@ class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c3
         $macros = $this->macros;
         // line 4
         echo "    <h1>PANEL DE CONTROL</h1>
+
+    <a class=\"btn btn-primary\" href=\"/create-post\">Añadir Post</a>
     <table class=\"table\">
         <thead class =\"thead-dark\">
             <tr>
                 <th scope =\"col\">#</th>
                 <th scope=\"col\">title</th>
                 <th scope=\"col\">body</th>
-                <th scope=\"col\">User</th>
                 <th scope=\"col\">Edit</th>
                 <th scope=\"col\">Delete</th>
             </tr>
         </thead>
+        <tbody>
+            ";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["posts"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
+            // line 19
+            echo "                <tr>
+                    <th scope=\"row\"> ";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 20), "html", null, true);
+            echo " </th>
+                    <td> ";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 21), "html", null, true);
+            echo " </td>
+                    <td> ";
+            // line 22
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "body", [], "any", false, false, false, 22), 0, 80), "html", null, true);
+            echo "</td>     
+                    <td><a class=\"btn btn-success\" href=\"/edit-post/";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 23), "html", null, true);
+            echo "\">Editar</a> </td>
+                    <td>Borrar</td>    
+                </tr>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 27
+        echo "        </tbody>
     </table>
 ";
     }
@@ -75,7 +109,7 @@ class __TwigTemplate_a8da4afb5f908b4f574148da18db7c633787f3fab4002ea2803613493c3
 
     public function getDebugInfo()
     {
-        return array (  50 => 4,  46 => 3,  35 => 1,);
+        return array (  95 => 27,  85 => 23,  81 => 22,  77 => 21,  73 => 20,  70 => 19,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()

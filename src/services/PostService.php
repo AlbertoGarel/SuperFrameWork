@@ -23,4 +23,10 @@ class PostService extends Service
         return null;        
     }
 
+    public function getPostByUser(int $idUser):Array
+    {
+        $repository = $this->doctrineManager->em->getRepository(Post::class);
+        return $repository->findByIdUser($idUser);
+    }
+
 }

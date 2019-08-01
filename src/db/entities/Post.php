@@ -29,9 +29,9 @@ class Post extends Entity
     public $body;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="id_user")
      */
-    public $id_user;
+    public $idUser;
 
     /**
      * @ORM\Column(type="datetime")

@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* register.twig.html */
-class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0deee4 extends \Twig\Template
+/* form-post.twig.html */
+class __TwigTemplate_5a27713fc015197e6bf6e6d68f86ea454c3393f113bf5e8e812d6615d78ed323 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -25,63 +25,69 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
 
     protected function doGetParent(array $context)
     {
-        // line 1
+        // line 2
         return "template.twig.html";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("template.twig.html", "register.twig.html", 1);
+        $this->parent = $this->loadTemplate("template.twig.html", "form-post.twig.html", 2);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
     // line 3
-    public function block_body($context, array $blocks = [])
+    public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         // line 4
-        echo "    
+        echo "    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/app.css\" />
+";
+    }
+
+    // line 6
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 7
+        echo " 
     <div class=\"container\">
         <div class=\"wrapper\">
-
-            <form role=\"form\" method=\"POST\" name=\"register_form\" class=\"form-signing\">
-                <h3 class=\"form-signin-heading\">Registro</h3>
-                <hr class=\"colorgraph\"><hr/>
-                <input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Nombre\" required=\"\" autofocus=\"\" />
-                <input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"Correo electrónico\" required=\"\" autofocus=\"\"/>
-                <input type=\"password\" class=\"form-control\" name=\"password\" placehoder=\"Password\" required=\"\" />
-                <button class=\"btn btn-lg btn-primary btn-block\" name=\"submit\" value=\"Register\" type=\"Submit\">Registro</button>
+            <form role=\"form\" method=\"POST\" name=\"create-post\" class=\"form-signin\">
+                <h3 class=\"form-signing-heading\">Añadir Post</h3>
+                <hr class=\"colorgraph\"><br/>
+                <input type=\"text\" class=\"form-control\" name=\"title\" placeholder=\"Titulo\" />
+                <textarea class=\"form-control\" name=\"body\" placeholder=\"body\"></textarea>
+                <button class=\"btn btn-lg btn-primary btn-block\" name=\"submit\" value=\"create\">Añadir</button>
             </form>
             ";
-        // line 16
+        // line 17
         if (($context["error"] ?? null)) {
-            // line 17
+            // line 18
             echo "            <div class=\"alert alert-danger\" role=\"alert\">
                 ";
-            // line 18
+            // line 19
             echo twig_escape_filter($this->env, ($context["error"] ?? null), "html", null, true);
             echo "
             </div>
         ";
         }
-        // line 21
-        echo "       </div>
+        // line 22
+        echo "        </div>
     </div>
-
-
 ";
     }
 
     public function getTemplateName()
     {
-        return "register.twig.html";
+        return "form-post.twig.html";
     }
 
     public function isTraitable()
@@ -91,11 +97,11 @@ class __TwigTemplate_3d9cdab5983954d9d525c9bf9494ef231db931992b516290d4cd59356d0
 
     public function getDebugInfo()
     {
-        return array (  75 => 21,  69 => 18,  66 => 17,  64 => 16,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  83 => 22,  77 => 19,  74 => 18,  72 => 17,  60 => 7,  56 => 6,  51 => 4,  47 => 3,  36 => 2,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "register.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/register.twig.html");
+        return new Source("", "form-post.twig.html", "/home/xavi/Documentos/COORDINACIÓN/bootcampValenciaMayo19/php/superframework/templates/form-post.twig.html");
     }
 }

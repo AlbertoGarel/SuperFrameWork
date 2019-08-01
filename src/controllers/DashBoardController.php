@@ -14,7 +14,7 @@ class DashBoardController extends ControllerAuth
      */
     private $postService;
 
-    
+
     public function create(){
         
         $post = new Post();
@@ -30,6 +30,6 @@ class DashBoardController extends ControllerAuth
 
 
     public function  index(){
-        $this->viewManager->renderTemplate('dashboard.twig.html',['user'=>$this->user->email]);
+        $this->viewManager->renderTemplate('dashboard.twig.html',['user'=>$this->user->email, 'posts'=>$this->postService->getPostByUser($this->user->id)]);
     }
 }
