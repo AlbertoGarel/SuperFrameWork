@@ -22,7 +22,7 @@ abstract class ControllerAuth
         $this->logManager->info("Controlador ->".get_class($this)." cargado");
         $this->sessionManager = $sessionManager;
         if (!$this->sessionManager->get('user')) return $this->redirectTo('login');
-        $this->user = $this->sessionManager->get('user')[0];
+        $this->user = $this->sessionManager->get('user');
     }
 
     public abstract function index();
