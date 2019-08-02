@@ -83,40 +83,38 @@ class __TwigTemplate_571cc70f6901cb79fccaac6df3b2ae2e6a99baf1507c74aad6a23d9342d
                                 <a href=\"#\" class=\"badge badge-dark badge-pill\">bootstrap</a>
                                 <a href=\"#\" class=\"badge badge-dark badge-pill\">responsive-design</a>
                                 <hr>
-                                <span class=\"badge badge-primary\"><i class=\"fa fa-user\"></i> 900 Post Totales</span>
+                                <span class=\"badge badge-primary\"><i class=\"fa fa-user\"></i> ";
+        // line 37
+        echo twig_escape_filter($this->env, ($context["countpost"] ?? null), "html", null, true);
+        echo " Post Totales</span>
                                 <span class=\"badge badge-success\"><i class=\"fa fa-cog\"></i> 43 Publicados</span>
                                 <span class=\"badge badge-danger\"><i class=\"fa fa-eye\"></i> 245 Borradores</span>
                             </div>
                             <div class=\"col-md-12\">
                                 <h5 class=\"mt-2\"><span class=\"fa fa-clock-o ion-clock float-right\"></span> Ultimos Posts</h5>
                                 <table class=\"table table-sm table-hover table-striped\">
-                                    <tbody>                                    
+                                    <tbody>  
+                                        ";
+        // line 45
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["lastpost"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["element"]) {
+            echo "                                  
                                         <tr>
                                             <td>
-                                                <strong>Abby</strong> joined ACME Project Team in <strong>`Collaboration`</strong>
+                                                <strong>";
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "title", [], "any", false, false, false, 48), "html", null, true);
+            echo " </strong> 
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Gary</strong> deleted My Board1 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Kensington</strong> deleted MyBoard3 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>John</strong> deleted My Board1 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Skell</strong> deleted his post Look at Why this is.. in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['element'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 52
+        echo "                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -129,8 +127,8 @@ class __TwigTemplate_571cc70f6901cb79fccaac6df3b2ae2e6a99baf1507c74aad6a23d9342d
                                 <label class=\"col-lg-3 col-form-label form-control-label\">Nombre</label>
                                 <div class=\"col-lg-9\">
                                     <input class=\"form-control\" type=\"text\" value= ";
-        // line 82
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "name", [], "any", false, false, false, 82), "html", null, true);
+        // line 64
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "name", [], "any", false, false, false, 64), "html", null, true);
         echo " >
                                 </div>
                             </div>
@@ -138,8 +136,8 @@ class __TwigTemplate_571cc70f6901cb79fccaac6df3b2ae2e6a99baf1507c74aad6a23d9342d
                                 <label class=\"col-lg-3 col-form-label form-control-label\">Email</label>
                                 <div class=\"col-lg-9\">
                                     <input class=\"form-control\" type=\"email\" value=\"";
-        // line 88
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "email", [], "any", false, false, false, 88), "html", null, true);
+        // line 70
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["data"] ?? null), "email", [], "any", false, false, false, 70), "html", null, true);
         echo "\">
                                 </div>
                             </div>
@@ -192,7 +190,7 @@ class __TwigTemplate_571cc70f6901cb79fccaac6df3b2ae2e6a99baf1507c74aad6a23d9342d
 
     public function getDebugInfo()
     {
-        return array (  142 => 88,  133 => 82,  71 => 23,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  140 => 70,  131 => 64,  117 => 52,  107 => 48,  99 => 45,  88 => 37,  71 => 23,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()

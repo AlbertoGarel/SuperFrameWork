@@ -56,4 +56,10 @@ class PostService extends Service
     {
         return $this->doctrineManager->em->getRepository(Post::class)->count(['idUser'=>$idUser]);
     }
+
+    public function getLimitPostOrderDesc(int $idUser)
+    {
+       
+        return $this->doctrineManager->em->getRepository(Post::class)->findByIdUser($idUser,["id"=>"DESC"],3);
+    }
 }

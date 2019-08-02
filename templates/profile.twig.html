@@ -34,39 +34,21 @@
                                 <a href="#" class="badge badge-dark badge-pill">bootstrap</a>
                                 <a href="#" class="badge badge-dark badge-pill">responsive-design</a>
                                 <hr>
-                                <span class="badge badge-primary"><i class="fa fa-user"></i> 900 Post Totales</span>
+                                <span class="badge badge-primary"><i class="fa fa-user"></i> {{countpost}} Post Totales</span>
                                 <span class="badge badge-success"><i class="fa fa-cog"></i> 43 Publicados</span>
                                 <span class="badge badge-danger"><i class="fa fa-eye"></i> 245 Borradores</span>
                             </div>
                             <div class="col-md-12">
                                 <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Ultimos Posts</h5>
                                 <table class="table table-sm table-hover table-striped">
-                                    <tbody>                                    
+                                    <tbody>  
+                                        {% for element in lastpost %}                                  
                                         <tr>
                                             <td>
-                                                <strong>Abby</strong> joined ACME Project Team in <strong>`Collaboration`</strong>
+                                                <strong>{{ element.title}} </strong> 
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Gary</strong> deleted My Board1 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Kensington</strong> deleted MyBoard3 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>John</strong> deleted My Board1 in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <strong>Skell</strong> deleted his post Look at Why this is.. in <strong>`Discussions`</strong>
-                                            </td>
-                                        </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
