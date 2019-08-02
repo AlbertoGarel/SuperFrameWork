@@ -23,7 +23,7 @@ class Web
                 $route->addRoute('GET','/delete-post/{id}',['App\controllers\PostController','delete']);
                 $route->addRoute('GET','/edit-post/{id}',['App\controllers\PostController','index']);
                 $route->addRoute('POST','/edit-post/{id}',['App\controllers\PostController','update']);
-    
+                $route->addRoute('GET','/perfil',['App\controllers\auth\ProfileController','index']);
             }
         );
 

@@ -13,33 +13,33 @@ class User extends Entity
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    protected $id;
+    public $id;
 
     /**
      * @ORM\Column(type="string")
      */
-    protected $name;
+    public $name;
 
     /**
      * @ORM\Column(type="string")
      */
-    protected $email;
+    public $email;
 
 
     /**
      * @ORM\Column(type="string")
      */
-    protected $password;
+    public $password;
 
     /**
      * @ORM\column(type="datetime")
      */
-    protected $created_at;
+    public $created_at;
 
     /**
      * @ORM\column(type="datetime")
      */
-    protected $updated_at;
+    public $updated_at;
 
     public function __construct()
     {

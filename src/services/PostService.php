@@ -51,4 +51,9 @@ class PostService extends Service
         $this->doctrineManager->em->flush();
         return $post;
     }
+
+    public function getCountAllPost(int $idUser):int
+    {
+        return $this->doctrineManager->em->getRepository(Post::class)->count(['idUser'=>$idUser]);
+    }
 }
