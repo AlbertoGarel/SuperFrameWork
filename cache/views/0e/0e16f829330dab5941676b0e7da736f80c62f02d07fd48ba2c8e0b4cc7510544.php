@@ -52,6 +52,9 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
         if (twig_test_empty(($context["user"] ?? null))) {
             // line 14
             echo "            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"/\">Inicio</a>
+            </li>
+            <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\"/login\">Login</a>
             </li>
             <li class=\"nav-item\">
@@ -59,18 +62,19 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
             </li>
             ";
         }
-        // line 21
+        // line 24
         echo "            ";
         if (($context["user"] ?? null)) {
-            // line 22
+            // line 25
             echo "            <div class=\"dropdown\">
                 <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenu2\" data-toggle=\"dropdown\" aria-expanded=\"false\">
                     ";
-            // line 24
+            // line 27
             echo twig_escape_filter($this->env, ($context["user"] ?? null), "html", null, true);
             echo "
                 </button>
                 <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenu2\">
+                    <a class=\"dropdown-item\" type=\"button\" href=\"/\">Inicio</a>
                     <a class=\"dropdown-item\" type=\"button\" href=\"/paneldecontrol\">Panel de Control</a>
                     <a class=\"dropdown-item\" type=\"button\" href=\"/perfil\">Perfil</a>
                     <a class=\"dropdown-item\" type=\"button\" href=\"/salir\">Salir</a>
@@ -78,7 +82,7 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
             </div>
             ";
         }
-        // line 33
+        // line 37
         echo "        </ul>
     </header>
     <div class=\"container\">
@@ -91,23 +95,24 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
         </div>
   
     ";
-        // line 44
+        // line 48
         $this->displayBlock('body', $context, $blocks);
-        // line 46
+        // line 50
         echo "
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js\"></script>
 <script src=\"/js/app.js\"></script>
 </body>
 </html>";
     }
 
-    // line 44
+    // line 48
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 45
+        // line 49
         echo "    ";
     }
 
@@ -123,7 +128,7 @@ class __TwigTemplate_8b133003a23a5c31b8854c005745b07c3fe8b13f3a320f04034d6242c11
 
     public function getDebugInfo()
     {
-        return array (  111 => 45,  107 => 44,  97 => 46,  95 => 44,  82 => 33,  70 => 24,  66 => 22,  63 => 21,  54 => 14,  52 => 13,  38 => 1,);
+        return array (  116 => 49,  112 => 48,  101 => 50,  99 => 48,  86 => 37,  73 => 27,  69 => 25,  66 => 24,  54 => 14,  52 => 13,  38 => 1,);
     }
 
     public function getSourceContext()

@@ -13,9 +13,16 @@ class PostController extends ControllerAuth
     private $postService;
     private $error;
     
-    public function index(){
-        $this->error = null;
-        $this->viewManager->renderTemplate('form-post.twig.html',['user'=>$this->user->email]);
+    public function index(int $id=null){
+        if ($id===null){
+            $this->error = null;
+            return $this->viewManager->renderTemplate('form-post.twig.html',['user'=>$this->user->email]);
+        }
+        $post = $this->postService->getPostById($id);
+        $this->viewManager->renderTemplate('form-post.twig.html',['post'=>$post,'user'=>$this->user->email]);
+
+
+
     }
 
     public function create(){
@@ -38,6 +45,19 @@ class PostController extends ControllerAuth
             $this->logManager->error($e->getMessage());
             $this->redirectTo('paneldecontrol');
 
+        }
+    }
+
+    public function update(int $id){
+        try{
+
+            $post = $this->postService->getPostById($id);
+            $post->title = $_POST['title'];
+            $post->body=$_POST['body'];
+            $this->postService->updatePostById($post);
+            $this->redirectTo('paneldecontrol');
+        }catch(\Exception $e){
+            $this->logManager->error($e->getmMessage());
         }
     }
 

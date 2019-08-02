@@ -39,4 +39,16 @@ class PostService extends Service
         return $this->doctrineManager->em->flush();
     }
 
+    public function getPostById(int $id):Post
+    {
+        $repository = $this->doctrineManager->em->getRepository(Post::class);
+        return $repository->find($id);
+    }
+
+    public function updatePostById(Post $post):Post
+    {
+        $this->doctrineManager->em->merge($post);
+        $this->doctrineManager->em->flush();
+        return $post;
+    }
 }

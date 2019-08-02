@@ -7,12 +7,12 @@
  
     <div class="container">
         <div class="wrapper">
-            <form role="form" method="POST" name="create-post" class="form-signin">
-                <h3 class="form-signing-heading">Añadir Post</h3>
+            <form role="form" method="POST" name="{{ post ? 'edit-post': 'create-post' }}" class="form-signin">
+                <h3 class="form-signing-heading">{{ post ? 'Modificar': 'Añadir' }} Post</h3>
                 <hr class="colorgraph"><br/>
-                <input type="text" class="form-control" name="title" placeholder="Titulo" />
-                <textarea class="form-control" name="body" placeholder="body"></textarea>
-                <button class="btn btn-lg btn-primary btn-block" name="submit" value="create">Añadir</button>
+                <input type="text" class="form-control" name="title" placeholder="Titulo" value= "{{ post.title }}" />
+                <textarea class="form-control ckeditor" name="body" placeholder="body"> {{ post.body  }}</textarea>
+                <button class="btn btn-lg btn-primary btn-block" name="submit" value="create">{{ post ? 'Modificar': 'Añadir' }}</button>
             </form>
             {% if error %}
             <div class="alert alert-danger" role="alert">

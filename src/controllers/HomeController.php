@@ -22,6 +22,6 @@ class HomeController extends Controller
     {
          $posts = $this->postService->getPosts();
           
-           $this->viewManager->renderTemplate("index.twig.html",["posts"=>$posts]);
+           $this->viewManager->renderTemplate("index.twig.html",["posts"=>$posts, "user"=>( !$this->user)?null:$this->user->email]);
     }
 }

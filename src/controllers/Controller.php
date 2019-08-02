@@ -15,6 +15,7 @@ abstract class Controller
     protected $viewManager;
     protected $logManager;
     protected $sessionManager;
+    protected $user;
 
     public function __construct(Container $container, ViewManager $viewManager,LogManager $logManager, SessionManager $sessionManager)
     {
@@ -22,6 +23,7 @@ abstract class Controller
         $this->logManager= $logManager;
         $this->logManager->info("Controlador ->".get_class($this)." cargado");
         $this->sessionManager = $sessionManager;
+        $this->user = $this->sessionManager->get('user');
     }
 
     public abstract function index();
