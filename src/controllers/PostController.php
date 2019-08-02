@@ -54,6 +54,7 @@ class PostController extends ControllerAuth
             $post = $this->postService->getPostById($id);
             $post->title = $_POST['title'];
             $post->body=$_POST['body'];
+            $post->updated_at= \Date(now);
             $this->postService->updatePostById($post);
             $this->redirectTo('paneldecontrol');
         }catch(\Exception $e){
