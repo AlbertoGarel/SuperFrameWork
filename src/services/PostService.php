@@ -29,12 +29,11 @@ class PostService extends Service
         return $repository->findByIdUser($idUser);
     }
 
-    public function deletePostById(int $idPost):int
+    public function deletePostById(int $idPost)
     {
-        $post = $this->doctrineManager->em->getRepository(Post::class)->findById($idPost);
+        $post = $this->doctrineManager->em->getRepository(Post::class)->find($idPost);
         if(!$post){
             $this->logManager->info("No existe el post");
-            return 0;
         }
         $this->doctrineManager->em->remove($post);
         return $this->doctrineManager->em->flush();

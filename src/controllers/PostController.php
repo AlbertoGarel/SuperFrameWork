@@ -29,13 +29,14 @@ class PostController extends ControllerAuth
     }
 
     public function delete(int $id){
+      
         try{
             $this->postService->deletePostById($id);
             $this->redirectTo('paneldecontrol');
         }catch(\Exception $e)
         {
             $this->logManager->error($e->getMessage());
-            $this->redirectTo('dashboard');
+            $this->redirectTo('paneldecontrol');
 
         }
     }
