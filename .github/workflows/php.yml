@@ -9,7 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-
+      with:
+        ref: develop
+      
     - name: Validate composer.json and composer.lock
       run: composer validate
 
